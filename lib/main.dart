@@ -1,17 +1,17 @@
-import "package:widgets/pages/counter_screen.dart";
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
+import 'pages/bottom_nav_bar.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MainApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Widgets',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.green),
-      home: const CounterScreen(),
+    return const MaterialApp(
+      home: BottomNavBar(),
     );
   }
 }

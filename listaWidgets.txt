@@ -1,12 +1,12 @@
 implementar los sig: widgets:
-alert dialog class
-bottom navigation bar class
-card class
-checkbox class
-show date picker function
-drawer class
-form class
-form field <T> class
+Alert Dialog class
+Bottom Navigation Bar class
+Card class
+Checkbox class
+Drawer class
+Form class
+Form Field <T> class
 List View class
 Radio<T> class
-Single child scroll view class
+Show Date Picker function
+Single Child Scroll View class
