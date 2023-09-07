@@ -10,8 +10,7 @@ class DatePickerW extends StatefulWidget {
 }
 
 /// RestorationProperty objects can be used because of RestorationMixin.
-class _DatePickerWState extends State<DatePickerW>
-    with RestorationMixin {
+class _DatePickerWState extends State<DatePickerW> with RestorationMixin {
   // In this example, the restoration ID for the mixin is passed in through
   // the [StatefulWidget]'s constructor.
   @override
@@ -71,12 +70,24 @@ class _DatePickerWState extends State<DatePickerW>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+            'Ejemplo de Date Picker'), // Título de la barra de aplicación
+      ),
       body: Center(
-        child: OutlinedButton(
-          onPressed: () {
-            _restorableDatePickerRouteFuture.present();
-          },
-          child: const Text('Open Date Picker'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+                'Date Picker muestra un selector de fecha que permite elegir una fecha dentro de un rango específico',
+                style: TextStyle(fontSize: 15)), // Texto "show1" con tamaño 15
+            OutlinedButton(
+              onPressed: () {
+                _restorableDatePickerRouteFuture.present();
+              },
+              child: const Text('Open Date Picker'),
+            ),
+          ],
         ),
       ),
     );
